@@ -34,8 +34,7 @@ app.patch('/todo/:id', (req, res) => {
 
 const mongoose = require('mongoose');
 const ToDo = require('./toDoModel.js').ToDo;
-const DB_URI = 'mongodb://13.233.142.5:27017/toDoApp';   //Sometimes replace mongo with Public-ip
-const client = new MongoClient(url, {useUnifiedTopology: true});
+const DB_URI = 'mongodb://13.233.142.5:27017';   //Sometimes replace mongo with Public-ip
 
 mongoose.connect(DB_URI).then(() => {
   console.log('Listening on port: ' + PORT);
